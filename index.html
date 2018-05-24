@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+    crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css" />
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css" />
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-regular.css" />
+  <link rel="stylesheet" href="./bower_components/boostrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./bower_components/fullpage.js/dist/jquery.fullpage.min.css" />
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <title>Tugas Besar Mesin Learning</title>
+</head>
+
+<body>
+  <div class="wrapper" id="app">
+    <div id="myd-fullpage">
+        <div class="section" id="scene-first">
+          <div class="myd-decoration">
+            <div class="myd-decoration-wrapper">
+              <div class="layer-scene" data-depth="0.7">
+                <div class="myd-boxed" data-myd-x="-370" data-myd-y="-350">
+                  <img src="assets/img/laptop.png" alt="">
+                </div>
+                <div class="myd-boxed" data-myd-x="-685" data-myd-y="-285">
+                  <img src="assets/img/book.png" alt="">
+                </div>
+                
+              </div>
+              <div class="layer-scene" data-depth="1.2">
+                <div class="myd-boxed" data-myd-x="-785" data-myd-y="-460">
+                  <img src="assets/img/pen.png" alt="">
+                </div>
+                <div class="myd-boxed" data-myd-x="0" data-myd-y="-120">
+                  <img src="assets/img/plant.png" alt="">
+                </div>
+                <div class="myd-boxed" data-myd-x="485" data-myd-y="-485">
+                  <img src="assets/img/cup.png" alt="">
+                </div>
+              </div>
+
+              <div class="layer-scene" data-depth="0.5">
+                <div class="myd-boxed" data-myd-x="-285" data-myd-y="-285">
+                  <div class="rectangle"></div>
+                </div>
+                <div class="myd-boxed" data-myd-x="285" data-myd-y="-285">
+                  <div class="circle"></div>
+                </div>
+              </div>
+              <div class="layer-scene" data-depth="0.9">
+                <div class="myd-boxed" data-myd-x="285" data-myd-y="285">
+                  <div class="rectangle"></div>
+                </div>
+                <div class="myd-boxed" data-myd-x="-285" data-myd-y="285">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gradient-first"></div>          
+          <div class="card myd-card-first">
+            <div class="card-body">
+              <div class="layer-scene" data-depth="0.3">
+                <h2 class="myd-page-title">Calc U Health</h2>
+                <h5 id="myd-typing-first" class="myd-typed myd-page-caption"></h5>
+                <div class="myd-actions">
+                  <a class="btn myd-btn" href="#thirdPage" role="button">Let's Try</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section" id="scene-fourth">
+          <div class="page-child reserve">
+            <div class="page-child-wrapper">
+              <div class="page-child-body">
+                <h2 class="page-child-title">BACKGROUND</h2>
+                <h3 class="page-child-caption">"Diabetes"</h3>
+                <p class="page-child-description">
+                  Diabetes is a serious illness whose case has skyrocketed in recent years. Millions of people in the world are diagnosed with diabetes because of unhealthy lifestyles and lack of exercise.
+                </p>
+                <p class="page-child-description">
+                  Increase fiber intake by eating fruit or vegetables. Not only to prevent diabetes, fiber can also help you to be full longer. Knowing the status of diabetes early is also can be a start to prevent diabetes becomes more severe.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="page-child">
+            <div class="page-child-wrapper">
+              <div class="page-child-body">
+                <h2 class="page-child-title">ABOUT US</h2>
+                <h3 class="page-child-caption">"Love your life, prevent diabetes early on."</h3>
+                <p class="page-child-description">
+                  Diabetes can cause various complications such as blindness, heart disease, kidney failure and much more. Don't be late, here's how to prevent diabetes you can do from now on. 
+                </p>
+                <p class="page-child-description">
+                  Calc U Health can help you to know what is the status of your diabetes and to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements. Let's try me to know your diabetes status early on!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="scene-third">
+          <div class="fp-bg"></div>
+          <div class="container-fluid myd-fullpage">
+            <div class="row">
+              <h2 class="section-title">CALC U HEALTH</h2>
+            </div>
+            <div class="row mt-4">
+              <div class="col-sm-6">
+                <div class="card myd-card-third">
+                  <div class="card-body">
+                    <form class="myd-form" id="diabetesForm">
+                      <span v-if="inputEmpty" class="d-block text-center pb-4 text-danger">Semua data harus di isi</span>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="">Pregnancies</label>
+                            <input type="text" class="form-control myd-input" v-model="dataForm.Pregnancies" placeholder="" v-validate="'required|numeric'" name="pregnancies">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Glucose</label>
+                            <input type="text" class="form-control myd-input" v-model="dataForm.Glucose" placeholder="" v-validate="'required|numeric'" name="glucose">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Blood Pressure</label>
+                            <input type="text" class="form-control myd-input" v-model="dataForm.BloodPressure" placeholder="" v-validate="'required|numeric'" name="blood_pressure">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Skin Thickness</label>
+                            <input type="text" class="form-control myd-input" v-model="dataForm.SkinThickness" placeholder="" v-validate="'required|numeric'" name="skin_thickness">
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="">Insulin</label>
+                            <input type="text" class="form-control myd-input" v-model="dataForm.Insulin" placeholder="" v-validate="'required|numeric'" name="insulin">
+                          </div>
+                          <div class="form-group">
+                            <label for="">BMI</label>
+                            <input type="text" class="form-control myd-input" v-model="dataForm.BMI" placeholder="" v-validate="'required|numeric'" name="bmi">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Diabetes pedigree</label>
+                            <input type="text" class="form-control myd-input" v-model="dataForm.DiabetesPredigreeFunction" placeholder="" v-validate="'required|numeric'" name="diabetes_pedigree_function">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Age</label>
+                            <input type="text" class="form-control myd-input" v-model="dataForm.Age" placeholder="" v-validate="'required|numeric'" name="age">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="myd-actions">
+                        <button v-if="result === null" type="button" class="btn myd-btn mini" @click="submit(dataForm)">CHECK NOW</button>
+                        <button v-if="result !== null" type="button" class="btn myd-btn mini" @click="resetForm">RESET</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div  class="col-sm-6">
+                <div class="card myd-card-fourth">
+                  <!-- <div class="card-header">
+                          RESULT
+                        </div> -->
+                  <div class="card-body">
+                    <div v-if="loader === true" class="d-flex align-items-center flex-column">
+                      <div class="loader"></div>
+                      <h2 class="calc-text">Calculating</h2>
+                    </div>
+                    <div v-if="errorStatus === true">
+                      <h2 style="text-align: center;">No Connection</h2>
+                    </div>
+                    <div v-if="result === null && loader !== true && errorStatus !== true">
+                      <h2 style="text-align: center;">Data Not Found</h2>
+                    </div>
+                    <div v-if="result !== null && loader !== true && errorStatus !== true">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="d-flex flex-column">
+                            <div class="myd-result">
+                              <h5 class="myd-result-label">Pregnancies</h5>
+                              <p class="myd-result-value">{{ dataForm.Pregnancies }}</p>
+                            </div>
+                            <div class="myd-result">
+                              <h5 class="myd-result-label">Glucose</h5>
+                              <p class="myd-result-value">{{ dataForm.Glucose }}</p>
+                            </div>
+                            <div class="myd-result">
+                              <h5 class="myd-result-label">Blood Pressure</h5>
+                              <p class="myd-result-value">{{ dataForm.BloodPressure }}</p>
+                            </div>
+                            <div class="myd-result">
+                              <h5 class="myd-result-label">Skin Thickness</h5>
+                              <p class="myd-result-value">{{ dataForm.SkinThickness }}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="d-flex flex-column">
+                            <div class="myd-result">
+                              <h5 class="myd-result-label">Insulin</h5>
+                              <p class="myd-result-value">{{ dataForm.Insulin }}</p>
+                            </div>
+                            <div class="myd-result">
+                              <h5 class="myd-result-label">BMI</h5>
+                              <p class="myd-result-value">{{ dataForm.BMI }}</p>
+                            </div>
+                            <div class="myd-result">
+                              <h5 class="myd-result-label">Diabetes pedigree</h5>
+                              <p class="myd-result-value">{{ dataForm.DiabetesPredigreeFunction }}</p>
+                            </div>
+                            <div class="myd-result">
+                              <h5 class="myd-result-label">Age</h5>
+                              <p class="myd-result-value">{{ dataForm.Age }}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div v-if="result == 1" class="myd-predict danger">
+                          <div class="myd-predict-icon">
+                            <i class="fas fa-thumbs-down"></i>
+                          </div>
+                          <div class="myd-predict-caption">
+                            You have diabetes
+                          </div>
+                        </div>
+                        <div v-if="result == 0" class="myd-predict">
+                          <div class="myd-predict-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                          </div>
+                          <div class="myd-predict-caption">
+                            You clear
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
+  <!-- <script src="./bower_components/fullpage.js/dist/jquery.fullpage.extensions.min.js"></script> -->
+  <script src="./bower_components/typed.js/lib/typed.min.js"></script>
+  <script src="./bower_components/popper.js/dist/umd/popper.min.js"></script>
+  <script src="./bower_components/boostrap/dist/js/bootstrap.min.js"></script>
+  <script src="./node_modules/parallax-js/dist/parallax.min.js"></script>
+  <script src="./node_modules/vee-validate/dist/vee-validate.min.js"></script>
+  <!-- <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> --> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js"></script> -->
+  <script src="./bower_components/vue/dist/vue.min.js"></script>
+  <script src="./bower_components/axios/dist/axios.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
